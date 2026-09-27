@@ -1,0 +1,9 @@
+EJERCICIO 1 - SCRIPT DE CARGA DE LOGIN
+Se implementó el plan JMeter para el CURL proporcionado: POST https://fakestoreapi.com/auth/login, Content-Type application/json, cuerpo con username/password alimentado por el CSV user/passwd. El plan tiene 50 usuarios virtuales, ramp-up de 30 s, duración de 180 s, objetivo de 20 TPS, aserción HTTP 200 y límite de 1500 ms por solicitud.
+
+Pendiente: ejecutar y comprobar los resultados reales. Las credenciales del enunciado no se han confirmado como válidas para FakeStore API; respuestas 401 impedirían evaluar el login exitoso con esos datos. El temporizador no acredita por sí solo que se hayan alcanzado 20 TPS. No se adjunta JTL ni se declaran resultados no medidos.
+
+EJERCICIO 2 - ANÁLISIS DE RESULTADOS FACILITADOS
+El resumen informa 276650 solicitudes, 6759 fallidas (2,44 %) y 269891 verificaciones correctas (97,55 %). El promedio de respuesta es 861,68 ms, mediana 613,42 ms, p90 1,28 s, p95 1,57 s y máximo 29,93 s. El gráfico muestra hasta 140 usuarios virtuales y una caída temporal de solicitudes por segundo aproximadamente entre 01:50 y 02:00 sin caída equivalente de usuarios. El gráfico no permite identificar por sí solo la causa. Véase InformeResultados.docx para hallazgos y recomendaciones.
+
+El umbral de 20 TPS y el límite de 1,5 s pertenecen al ejercicio 1; cualquier comparación con el ejercicio 2 es orientativa, no un criterio de aceptación explícito para ese ejercicio.

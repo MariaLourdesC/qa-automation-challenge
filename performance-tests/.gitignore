@@ -1,0 +1,9 @@
+**/target/
+*.jtl
+*.log
+results/
+report-html/
+.DS_Store
+.idea/
+.vscode/
+.env
